@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".Category.UpdateCategory"
+    android:layout_height="match_parent">
+    <RelativeLayout
+
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+        <ImageView
+            android:id="@+id/logo_img"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"/>
+        <LinearLayout
+
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/layout"
+            android:layout_below="@+id/logo_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center">
+            <EditText
+                android:id="@+id/categoryName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/txt_field"
+                android:hint="@string/user_name"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"/>
+
+
+
+                <LinearLayout
+                    android:id="@+id/linear_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+
+                    >
+                    <LinearLayout
+                        android:id="@+id/container_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="30dp"
+
+
+
+
+                        >
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/transparent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+
+
+                            >
+
+                            <ProgressBar
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:clickable="false"
+                                android:indeterminateTint="@color/colorPrimary"
+                                android:longClickable="false"
+                                android:visibility="gone" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                />
+
+                        </FrameLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+            <Button
+                android:id="@+id/updateBtb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_field"
+                android:layout_marginTop="20dp"
+                android:textSize="25dp"
+                android:text="تحديث  "
+                android:textColor="@android:color/white"
+                />
+
+
+
+            <Button
+                android:id="@+id/deleteBtb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_field"
+                android:layout_marginTop="20dp"
+                android:textSize="25dp"
+                android:text="حذف "
+                android:textColor="@android:color/white"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>
+

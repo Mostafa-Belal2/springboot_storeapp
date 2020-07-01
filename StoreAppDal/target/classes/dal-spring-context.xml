@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+         http://www.springframework.org/schema/tx
+        https://www.springframework.org/schema/tx/spring-tx.xsd"
+>
+    
+    <context:annotation-config/>
+    <context:component-scan base-package="net.storeapp.storeapp.dal"/> <!-- for components scan -->
+    <!-- To enable annotation over classes | END -->    
+    
+
+    <tx:annotation-driven
+        transaction-manager="transactionManager" />
+
+    
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/storeapp"/>
+        <property name="username" value="root"/>
+        <property name="password" value=""/>
+    </bean>
+
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+   
+        <property name="annotatedClasses">
+            <list>
+                <value>net.storeapp.storeapp.dal.entity.BillEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.BorrowEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.BuyEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.CategoryEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.CostEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.CustomerEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.CustomerClientEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.CustomerSupplierEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.DamageEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.ReturnEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.SellEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.SizeEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.StoreEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.SubCategoryEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.SupplierEntity</value>
+                <value>net.storeapp.storeapp.dal.entity.UserEntity</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.current_session_context_class">thread</prop>
+            </props>
+        </property>
+    </bean>
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+
+    <!--To solve proxy problem | START-->    
+    <aop:config proxy-target-class="true" />
+    <aop:aspectj-autoproxy />
+    <!--To solve proxy problem | END-->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+</beans>

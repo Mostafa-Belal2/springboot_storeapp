@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    tools:context=".User.AddUser"
+    android:paddingRight="30dp"
+    >
+
+    <ImageView
+        android:id="@+id/logo_img"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+
+        android:id="@+id/layout"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/icon_selector"
+            android:textColorHint="@color/colorPrimary"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:hint="@string/user_name"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/usernameLogin"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/user_name"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:textColorHint="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:background="@drawable/txt_field" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/icon_selector"
+            android:textColorHint="@color/colorPrimary"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="7dp"
+            app:hintEnabled="false">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passowrdLogin"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/password"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:layout_gravity="end"
+                android:textAlignment="viewEnd"
+
+                android:textColorHint="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:background="@drawable/txt_field"
+                android:inputType="textPassword"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/loginBtb"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_field"
+            android:text="@string/log_in"
+            android:textColor="@android:color/white" />
+
+
+
+        <Button
+            android:id="@+id/btn_adduser"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/txt_field_signup"
+            android:text="@string/sign_up"
+            android:textColor="@color/colorPrimary" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/url"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>
+

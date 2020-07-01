@@ -1,0 +1,16 @@
+net\storeapp\storeapp\common\SellBean.class
+net\storeapp\storeapp\common\SupplierBean.class
+net\storeapp\storeapp\common\BillBean.class
+net\storeapp\storeapp\common\ReturnBean.class
+net\storeapp\storeapp\common\SubCategoryBean.class
+net\storeapp\storeapp\common\BorrowBean.class
+net\storeapp\storeapp\common\DamageBean.class
+net\storeapp\storeapp\common\CustomerClientBean.class
+net\storeapp\storeapp\common\SizeBean.class
+net\storeapp\storeapp\common\CustomerBean.class
+net\storeapp\storeapp\common\UserBean.class
+net\storeapp\storeapp\common\CostBean.class
+net\storeapp\storeapp\common\CustomerSupplierBean.class
+net\storeapp\storeapp\common\BuyBean.class
+net\storeapp\storeapp\common\CategoryBean.class
+net\storeapp\storeapp\common\StoreBean.class

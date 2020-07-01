@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".Customer.ListCusotmer"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:text="اسماء العملاء"
+        android:textSize="25dp"
+
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="14dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_gravity="center"
+
+        android:paddingRight="10dp"
+
+
+        />
+    <LinearLayout
+        android:id="@+id/linear_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="6"
+        >
+
+        <EditText
+            android:id="@+id/customerName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/txt_field"
+            android:hint="@string/user_name"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/addCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_field"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="30dp"
+            android:textSize="25dp"
+            android:text="اضافه عميل "
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customerListRecycler"
+        android:scrollbars="vertical">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>
